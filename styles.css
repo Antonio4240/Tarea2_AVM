@@ -884,7 +884,7 @@ button {
    SOLUCIÓN: El selector está mal escrito, debería ser .project__card:hover .project__overlay
    El selector correcto utiliza :hover en el contenedor padre para afectar al hijo
    Cambiar project__card-hover por .project__card:hover */
-.project__card-hover .project__overlay {
+.project__card:hover .project__overlay {
     opacity: 1;
 }
 
@@ -1085,6 +1085,7 @@ button {
     /* ERROR 16: Los iconos de redes sociales del footer están apilados verticalmente
        PISTA: Falta la propiedad display que permite alinear elementos en fila */
     gap: var(--spacing-md);
+    display: flex;
 }
 
 .footer__social-link {
