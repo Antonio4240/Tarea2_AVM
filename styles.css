@@ -455,6 +455,7 @@ button {
     /* ERROR 9: El blob en el hero no tiene la animación de forma dinámica
        PISTA: Falta la propiedad animation que referencia a blob-animation */
     position: relative;
+    animation: blob-animation 6s infinite ease-in-out;
 }
 
 @keyframes blob-animation {
@@ -556,6 +557,7 @@ button {
        PISTA: Falta la propiedad de CSS Grid que define las columnas */
     gap: var(--spacing-xl);
     margin-bottom: var(--spacing-3xl);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .interest__card {
