@@ -569,6 +569,7 @@ button {
     transition: all var(--transition-base);
     position: relative;
     overflow: hidden;
+    border-radius: 16px;
 }
 
 .interest__card::before {
@@ -580,6 +581,7 @@ button {
     height: 3px;
     background: var(--gradient-primary);
     transform: scaleX(0);
+    transition: transform var(--transition-base);
     /* ERROR 12 (AVANZADO): La línea superior de las cards aparece instantáneamente sin animación
        SOLUCIÓN: Falta la transición para la propiedad transform
        Agregar: transition: transform var(--transition-base);
