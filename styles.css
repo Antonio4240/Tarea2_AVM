@@ -224,6 +224,7 @@ button {
     background: var(--gradient-primary);
     color: white;
     border: none;
+    box-shadow: var(--shadow-xl), 0 0 20px rgba(7, 147, 211, 0.627);
     /* ERROR 5: El botón primario no tiene profundidad ni efecto de brillo
        PISTA: Falta la propiedad que agrega sombras al elemento */
 }
@@ -284,6 +285,7 @@ button {
     /* ERROR 6: Los elementos del nav no están alineados verticalmente al centro
        PISTA: Falta una propiedad de flexbox que alinea items en el eje transversal */
     justify-content: space-between;
+     align-items: center;
     height: 100%;
 }
 
