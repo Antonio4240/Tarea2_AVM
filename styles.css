@@ -34,7 +34,7 @@
     /* Colores principales */
     /* ERROR 1: El color primario no es el correcto, debería ser un cyan vibrante
        PISTA: Revisa el valor hexadecimal, el original era un tono cyan (#0ea5e9) */
-    --color-primary: #ff0000;          /* Cyan vibrante */
+    --color-primary: #0ea5e9;          /* Cyan vibrante */
     --color-primary-dark: #0284c7;
     --color-primary-light: #38bdf8;
     --color-secondary: #8b5cf6;         /* Violeta eléctrico */
@@ -102,7 +102,7 @@
     /* Z-index */
     /* ERROR 2: El header queda detrás del contenido al hacer scroll
        PISTA: El valor del z-index es muy bajo para un elemento fijo */
-    --z-fixed: 1;
+    --z-fixed: 100;
     --z-modal: 1000;
     
     /* Header */
