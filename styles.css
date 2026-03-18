@@ -1026,6 +1026,7 @@ button {
     border-radius: var(--border-radius-xl);
     padding: var(--spacing-2xl);
     text-align: center;
+    background: var(--gradient-primary);
 }
 
 .contact__card-title {
@@ -1100,6 +1101,7 @@ button {
     font-size: var(--font-size-lg);
     color: var(--color-text-secondary);
     transition: all var(--transition-base);
+    border-radius: 180px;
 }
 
 .footer__social-link:hover {
