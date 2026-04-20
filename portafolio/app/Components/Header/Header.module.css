@@ -1,0 +1,81 @@
+/* ========== HEADER ========== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    z-index: var(--z-fixed);
+    transition: all var(--transition-base);
+}
+
+.nav {
+    display: flex;
+    /* ERROR 6: Los elementos del nav no están alineados verticalmente al centro
+       PISTA: Falta una propiedad de flexbox que alinea items en el eje transversal */
+    justify-content: space-between;
+     align-items: center;
+    height: 100%;
+}
+
+.nav__logo {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    transition: color var(--transition-fast);
+}
+
+.nav__logo:hover {
+    color: var(--color-primary);
+}
+
+.logo__bracket {
+    color: var(--color-primary);
+}
+
+.nav__list {
+    display: flex;
+    gap: var(--spacing-xl);
+}
+
+.nav__link {
+    position: relative;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    transition: color var(--transition-fast);
+    padding: var(--spacing-sm) 0;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: width var(--transition-base);
+    /* ERROR 7 (AVANZADO): La línea debajo del link aparece de golpe sin animación
+       SOLUCIÓN: Falta la transición para la propiedad width
+       Agregar: transition: width var(--transition-base);
+       Esto hace que la línea se expanda suavemente al hacer hover */
+}
+
+.nav__link:hover,
+.nav__link--active {
+    color: var(--color-text-primary);
+}
+
+.nav__link:hover::after,
+.nav__link--active::after {
+    width: 100%;
+}
+
+/* Checkbox oculto para menú móvil */
+.nav__checkbox {
+    display: none;
+}
