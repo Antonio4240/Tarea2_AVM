@@ -1,0 +1,76 @@
+/* ========== FOOTER ========== */
+.footer {
+    background: var(--color-bg-secondary);
+    padding: var(--spacing-3xl) 0 var(--spacing-xl);
+    border-top: 1px solid var(--color-bg-tertiary);
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--color-bg-tertiary);
+}
+
+.footer__logo {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.footer__text {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin-top: var(--spacing-sm);
+    max-width: 300px;
+}
+
+.footer__social {
+    /* ERROR 16: Los iconos de redes sociales del footer están apilados verticalmente
+       PISTA: Falta la propiedad display que permite alinear elementos en fila */
+    gap: var(--spacing-md);
+    display: flex;
+}
+
+.footer__social-link {
+    width: 45px;
+    height: 45px;
+    background: var(--color-bg-tertiary);
+    /* ERROR 17: Los iconos de redes sociales son cuadrados en vez de círculos
+       PISTA: Falta una propiedad de borde para hacer elementos circulares */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    transition: all var(--transition-base);
+    border-radius: 180px;
+}
+
+.footer__social-link:hover {
+    background: var(--gradient-primary);
+    color: white;
+    transform: translateY(-5px);
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__copyright {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.footer__made {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.footer__made i {
+    color: #ef4444;
+}
