@@ -1,0 +1,122 @@
+/* ========== CV SECTION ========== */
+.cv {
+    background: var(--color-bg-primary);
+    position: relative;
+}
+
+.cv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 0% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 100% 50%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.cv__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.cv__description {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.8;
+}
+
+.cv__buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.cv__social-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.cv__social-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.social__card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-bg-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-md) var(--spacing-lg);
+    transition: all var(--transition-base);
+}
+
+.social__card:hover {
+    transform: translateX(10px);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-lg);
+}
+
+.social__icon {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xl);
+}
+
+.social__icon--linkedin {
+    background: rgba(0, 119, 181, 0.2);
+    color: #0077b5;
+}
+
+
+.social__icon--github {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-primary);
+}
+
+.social__icon--email {
+    background: rgba(14, 165, 233, 0.2);
+    color: var(--color-primary);
+}
+
+.social__info {
+    flex: 1;
+}
+
+.social__name {
+    display: block;
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.social__user {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.social__arrow {
+    color: var(--color-text-muted);
+    transition: all var(--transition-base);
+}
+
+.social__card:hover .social__arrow {
+    color: var(--color-primary);
+    transform: translateX(5px);
+}
