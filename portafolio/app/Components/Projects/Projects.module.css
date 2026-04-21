@@ -1,0 +1,232 @@
+/* ========== SECTION GENERAL ========== */
+.projects {
+    background: #1d061a;
+    padding: 5rem 2rem;
+    color: white;
+}
+
+.section__header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section__subtitle {
+    color: #aaa;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section__title {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.section__description {
+    color: #bbb;
+}
+
+/* ========== CONTENEDOR ORIGINAL ========== */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* ========== CARD BASE (CALCA) ========== */
+.box {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    margin: 40px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+/* FONDO INCLINADO */
+.box::before,
+.box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+}
+
+.box::after {
+    filter: blur(30px);
+}
+
+/* HOVER EXPANSIÓN */
+.box:hover::before,
+.box:hover::after {
+    transform: skewX(0deg);
+    left: 20px;
+    width: calc(100% - 90px);
+}
+
+/* ========== COLORES POR CARD ========== */
+.box1::before,
+.box1::after {
+    background: linear-gradient(315deg, #ffbc00, #ff0058);
+}
+
+.box2::before,
+.box2::after {
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+
+.box3::before,
+.box3::after {
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+
+/* ========== SPAN EFECTO (OBLIGATORIO) ========== */
+.box span {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* CUADRO SUPERIOR */
+.box span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.2s;
+    animation: floatBox 2s ease-in-out infinite;
+}
+
+/* CUADRO INFERIOR */
+.box span::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    animation: floatBox 2s ease-in-out infinite;
+    animation-delay: -1s;
+}
+
+/* ACTIVACIÓN */
+.box:hover span::before {
+    top: -50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+
+.box:hover span::after {
+    bottom: -50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+
+/* ANIMACIÓN */
+@keyframes floatBox {
+    0%, 100% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translate(-10px);
+    }
+}
+
+/* ========== CONTENIDO ========== */
+.content {
+    position: relative;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    z-index: 1;
+    color: white;
+    transition: 0.5s;
+}
+
+/* EFECTO HOVER CONTENIDO */
+.box:hover .content {
+    transform: translateX(-25px);
+    padding: 60px 40px;
+}
+
+/* TEXTOS */
+.content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+/* TECNOLOGÍAS */
+.tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.tech span {
+    font-size: 0.75rem;
+    background: rgba(255,255,255,0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* LINKS */
+.links {
+    display: flex;
+    gap: 10px;
+}
+
+.links a {
+    font-size: 0.9rem;
+    background: white;
+    color: #111;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    background: #ffcf4d;
+    transform: scale(1.05);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .box {
+        width: 280px;
+        height: 380px;
+    }
+}

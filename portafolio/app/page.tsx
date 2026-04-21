@@ -4,7 +4,7 @@ import Footer from "./Components/Footer/Footer";
 import Hero from "./Components/Hero/Hero"
 import Cv from "./Components/Cv/Cv"
 import Interest from "./Components/Interest/Interest";
-
+import Projects from "./Components/Projects/Projects";
 export default function Home() {
   return (
    <>
@@ -12,6 +12,7 @@ export default function Home() {
 
    <Hero/>
    <Interest/>
+   <Projects/>
    <Cv/>
 
    <Footer/>
